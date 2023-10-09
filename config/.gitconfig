@@ -29,3 +29,5 @@
 [alias]
     lg = log --all --decorate --oneline --graph
     pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
+[safe]
+    directory = /root/HOST
