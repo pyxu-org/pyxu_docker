@@ -1,6 +1,6 @@
 # [2023.10.07 Sepand] 20.04 chosen over 22.04
 # Reason: we want DrJIT (via PyPI) to work out of the box with system's LLVM.
-FROM ubuntu:20.04
+FROM nvidia/cuda:12.2.0-devel-ubuntu20.04
 SHELL ["/bin/bash", "-c"]
 
 LABEL maintainer="Sepand KASHANI <sepand@kashani.ch>"
@@ -38,7 +38,7 @@ RUN mkdir ~/HOST
 ### Install Pyxu
 RUN    source .bash_aliases \
     && conda create --quiet --yes --name pyxu python=3.11 \
-    && conda run --name pyxu python3 -m pip install pyxu[complete-cpu]
+    && conda run --name pyxu python3 -m pip install pyxu[complete]
 
 ### Serve a Jupyter-lab interface to users
 EXPOSE 8888
