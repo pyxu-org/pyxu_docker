@@ -1,6 +1,6 @@
 # [2023.10.07 Sepand] 20.04 chosen over 22.04
 # Reason: we want DrJIT (via PyPI) to work out of the box with system's LLVM.
-FROM ubuntu:20.04
+FROM nvidia/cuda:12.2.0-devel-ubuntu20.04
 SHELL ["/bin/bash", "-c"]
 
 LABEL maintainer="Sepand KASHANI <sepand@kashani.ch>"
