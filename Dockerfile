@@ -47,10 +47,10 @@ RUN    mkdir ~/tools \
     && mv ./lsd-v1.0.0-x86_64-unknown-linux-gnu/lsd ./lsd \
     && rm -rf ./lsd-v1.0.0-x86_64-unknown-linux-gnu* \
     # [INSTALL] git-delta =====================================================
-    && wget https://github.com/dandavison/delta/releases/download/0.16.5/delta-0.16.5-x86_64-unknown-linux-gnu.tar.gz \
-    && tar -xzf ./delta-0.16.5-x86_64-unknown-linux-gnu.tar.gz \
-    && mv ./delta-0.16.5-x86_64-unknown-linux-gnu/delta ./delta \
-    && rm -rf ./delta-0.16.5-x86_64-unknown-linux-gnu* \
+    && wget https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-x86_64-unknown-linux-gnu.tar.gz \
+    && tar -xzf ./delta-0.13.0-x86_64-unknown-linux-gnu.tar.gz \
+    && mv ./delta-0.13.0-x86_64-unknown-linux-gnu/delta ./delta \
+    && rm -rf ./delta-0.13.0-x86_64-unknown-linux-gnu* \
     # [INSTALL] lazygit =======================================================
     && LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') \
     && wget "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" \
