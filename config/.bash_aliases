@@ -27,10 +27,8 @@ append_to() {
     esac
 }
 
-
 # Customize Shell Environment =================================================
 eval "$(starship init bash)"
-
 
 # Unlimited Bash History ======================================================
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
@@ -39,7 +37,6 @@ export HISTFILESIZE=                     # no file size limit
 shopt -s histappend                      # append to history, don't overwrite it
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND}"
-
 
 # PATH ADDITIONS ==============================================================
 append_to PATH ~/tools/  # extra binary utilities

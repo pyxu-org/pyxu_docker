@@ -63,6 +63,7 @@ RUN    mkdir ~/tools \
 
 ### Configure all tools installed
 WORKDIR /root
+COPY config/.bashrc        .bashrc
 COPY config/.bash_aliases  .bash_aliases
 COPY config/.condarc       .condarc
 COPY config/.gitconfig     .gitconfig
