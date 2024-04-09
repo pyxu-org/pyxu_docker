@@ -18,6 +18,7 @@ RUN    apt update \
                                                  detox \
                                                  dpkg \
                                                  fzf \
+                                                 gdb \
                                                  git \
                                                  gnupg2 \
                                                  graphviz \
