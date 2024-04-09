@@ -29,6 +29,7 @@ append_to() {
 
 # Customize Shell Environment =================================================
 eval "$(starship init bash)"
+bind -s 'set completion-ignore-case on'  # case-insensitive auto-complete
 
 # Unlimited Bash History ======================================================
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
